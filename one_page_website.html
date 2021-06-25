@@ -4,6 +4,7 @@
 		<meta charset="utf=8">
 		<title>The Husky House</title>
 		<link rel="stylesheet" href="./css/one_page_website.css">
+		<script src="JS/one_page_website.js"></script>
 		</head>
 		<body>
 		
@@ -26,38 +27,62 @@
 			
 			<!-- GALLERY -->
 			<section>
-				<div id="gallery">
-					<h1>Gallery</h1>
-					<div>
-					
-						<!-- PHOTO-CONTAINER 1 -->
-						<div>
-								<img width="320" height="240" src="./Images/Thumb/thumbnail_1.jpg" alt="Puppy">
-									<p>We have puppies.
-						</div>	
-						<!-- END PHOTO-CONTAINER 1 -->
-						
-						<!-- PHOTO-CONTAINER 2 -->
-						<div>
-								<img width="320" height="240" src="./Images/Thumb/thumbnail_2.jpg" alt="Male Adult">
-									<p>We have male adults.
-						</div>	
-						<!-- END PHOTO-CONTAINER 2 -->
-						
-						<!-- PHOTO-CONTAINER 3 -->
-						<div>
-								<img width="320" height="240" src="./Images/Thumb/thumbnail_3.jpg" alt="Female Adult">
-									<p>We have female adults
-						</div>	
-						<!-- END PHOTO-CONTAINER 3 -->
-						
-						<!-- VIDEO-CONTAINER 1 -->
-						<div>
-							<iframe width="560" height="315" src="https://www.youtube.com/embed/P_4hojFKbd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-						</div>
-						
-					</div>
-				</div>
+				<h2 style="text-align:center">Lightbox</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="./Images/Thumb/thumbnail_1.jpg" style="width:100%" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="./Images/Thumb/thumbnail_2.jpg" style="width:100%" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+  </div>
+  <div class="column">
+    <img src="./Images/Thumb/thumbnail_3.jpg" style="width:100%" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+  </div>
+</div>
+
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+
+    <div class="mySlides">
+      <div class="numbertext">1 / 4</div>
+      <img src="./Images/Thumb/thumbnail_1.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">2 / 4</div>
+      <img src="./Images/Thumb/thumbnail_2.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides">
+      <div class="numbertext">3 / 4</div>
+      <img src="./Images/Thumb/thumbnail_3.jpg" style="width:100%">
+    </div>
+    
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <div class="caption-container">
+      <p id="caption"></p>
+    </div>
+
+
+    <div class="column">
+      <img class="demo cursor" src="./Images/Thumb/thumbnail_1.jpg" style="width:100%" onclick="currentSlide(1)" alt="Nature and sunrise">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./Images/Thumb/thumbnail_2.jpg" style="width:100%" onclick="currentSlide(2)" alt="Snow">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="./Images/Thumb/thumbnail_3.jpg" style="width:100%" onclick="currentSlide(3)" alt="Mountains and fjords">
+    </div>
+  </div>
+</div>
+
+<div>
+	<iframe width="560" height="315" src="https://www.youtube.com/embed/P_4hojFKbd8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
 			</section>
 			<!-- END GALLERY -->
 			
